@@ -9,27 +9,47 @@
 <title>TicTacToe</title>
 
 <script>
-
-NUM_BUTTONS = 10
 	
-    window.onload=createBoard();
-
-	function createBoard()
-	{
-		for (let i=1;i<NUM_BUTTONS; i++)
-		{
-			btnObj= document.getElementById("btn"+i;
-
+	NUM_BUTTONS = 10
+	
+	window.onload = function() {
+		createBoard();
+	};
+	
+	function createBoard() {
+		for (let i = 1; i < NUM_BUTTONS + 1; i++) {
+			btnObj = document.getElementById("btn" + i);
 			btnObj.onclick = function() {
-
-				id = this.id;
-
-				btnNumber = id.charAt(3);
-
-				alert("You pressed " + btnNumber)
-		   } 
+				if (btnObj.value == "1") {
+					btnObj.value = "X";
+				} else {
+					btnObj.value = "O";
+				}
+			};
 		}
 	}
+
+
+//	NUM_BUTTONS = 10
+//	
+//	window.onload= function()
+//	{
+//		createBoard();
+//	}
+//	
+//	function createBoard()
+//	{
+//		for (let i=1; i<NUM_BUTTONS; i++)
+//		{
+//			btnObj= document.getElementById("btn"+i);
+//			btnObj.onclick = function() 
+//			{
+//			if {(btnObj.value == "1")
+//				btnObj.value = "X";
+//			   }else{
+//				btnObj.value = "O";
+//			}}}}
+
     
 </script>
 
@@ -49,7 +69,8 @@ NUM_BUTTONS = 10
 		{
 		   btnNumber = n;
 
-		   document.write('<input type="button" value=" " + " id="btn' + btnNumber + '"> &nbsp;&nbsp;')
+   document.write('<input type="button" value=" ' + btnNumber + '" id="btn' + btnNumber + '"> &nbsp;&nbsp;')
+
 
 		   if ( n % 3 == 0) 
 		   {
@@ -59,7 +80,7 @@ NUM_BUTTONS = 10
 		</script>
 	</div>
 		
-	<button onclick="function()">New Game!</button>
+<!--	<button onclick="createBoard()">New Game!</button>-->
 
 </body>
 
