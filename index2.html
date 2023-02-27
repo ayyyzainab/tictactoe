@@ -1,88 +1,54 @@
 <!doctype html>
-
 <html>
-
 <head>
+    <meta charset="utf-8">
+    <script>
+		NUM_BUTTONS = 10;
+		player = "X"
 
-<meta charset="utf-8">
+		console.log("page loaded");
 
-<title>TicTacToe</title>
+		function change_player (btnNumber) {
+			let btnObj = document.getElementById("btn" + btnNumber);
 
-<script>
-	
-	NUM_BUTTONS = 10
-	
-	window.onload = function() {
-		createBoard();
-	};
-	
-	function createBoard() {
-		for (let i = 1; i < NUM_BUTTONS + 1; i++) {
-			btnObj = document.getElementById("btn" + i);
-			btnObj.onclick = function() {
-				if (btnObj.value == "1") {
-					btnObj.value = "X";
-				} else {
-					btnObj.value = "O";
-				}
-			};
+			if (player === "X") {
+				btnObj.value = "O";
+				player = "O"; 
+			} else if (player === "O") { 
+				btnObj.value = "X";
+				player = "X"; 
+			}
 		}
-	}
 
+		function clickedButton(btnNumber) {
+			console.log(btnNumber);
+			let btnObj = document.getElementById("btn" + btnNumber);                  
+			if (btnObj.value == " ") {
+				change_player(btnNumber); 
+			} 
+		};
 
-//	NUM_BUTTONS = 10
-//	
-//	window.onload= function()
-//	{
-//		createBoard();
-//	}
-//	
-//	function createBoard()
-//	{
-//		for (let i=1; i<NUM_BUTTONS; i++)
-//		{
-//			btnObj= document.getElementById("btn"+i);
-//			btnObj.onclick = function() 
-//			{
-//			if {(btnObj.value == "1")
-//				btnObj.value = "X";
-//			   }else{
-//				btnObj.value = "O";
-//			}}}}
-
-    
-</script>
-
-<link href="style2.css" rel="stylesheet" type="text/css">
-</head>
-
-
-<body>
-	
-	<h1>Let's play Tic Tac Toe!</h1>
-		<h3> Go: Player X</h3>
-		<h3> Go: Player O</h3>
-	<div class ="tictactoe">
-
-		<script>
-		for (let n=1; n<NUM_BUTTONS; n++)
-		{
-		   btnNumber = n;
-
-   document.write('<input type="button" value=" ' + btnNumber + '" id="btn' + btnNumber + '"> &nbsp;&nbsp;')
-
-
-		   if ( n % 3 == 0) 
-		   {
-			   document.write("<br>")
-		   }
-		}
-		</script>
-	</div>
 		
-<!--	<button onclick="createBoard()">New Game!</button>-->
-
+    </script>
+    <title>TicTacToe</title>
+    <link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Let's play Tic Tac Toe!</h1>
+    <div class ="tictactoe">
+        <script>
+        for (let n=1; n<NUM_BUTTONS; n++) {
+            btnNumber = n;
+			console.log(btnNumber);
+			document.write('<input type="button" value=" " id="btn' + btnNumber + '" onclick="clickedButton(' + btnNumber + ')"> &nbsp;&nbsp;');
+			
+            if (n % 3 == 0) {
+                document.write("<br>");
+            }
+        }
+			
+        </script>
+    </div>
+     <button onclick="window.location.reload();">New Game!</button> 
 </body>
-
 </html>
-
