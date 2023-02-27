@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>TicTacToe</title>
+
+<script>
+
+NUM_BUTTONS = 10
+	
+    window.onload=createBoard();
+
+	function createBoard()
+	{
+		for (let i=1;i<NUM_BUTTONS; i++)
+		{
+			btnObj= document.getElementById("btn"+i;
+
+			btnObj.onclick = function() {
+
+				id = this.id;
+
+				btnNumber = id.charAt(3);
+
+				alert("You pressed " + btnNumber)
+		   } 
+		}
+	}
+    
+</script>
+
+<link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+	
+	<h1>Let's play Tic Tac Toe!</h1>
+		<h3> Go: Player X</h3>
+		<h3> Go: Player O</h3>
+	<div class ="tictactoe">
+
+		<script>
+		for (let n=1; n<NUM_BUTTONS; n++)
+		{
+		   btnNumber = n;
+
+		   document.write('<input type="button" value=" " + " id="btn' + btnNumber + '"> &nbsp;&nbsp;')
+
+		   if ( n % 3 == 0) 
+		   {
+			   document.write("<br>")
+		   }
+		}
+		</script>
+	</div>
+		
+	<button onclick="function()">New Game!</button>
+
+</body>
+
+</html>
+

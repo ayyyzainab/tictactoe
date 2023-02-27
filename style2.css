@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html
+{
+	background-color: #D5E2F2;
+}
+
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9
+{
+	height: 150px;
+    width: 150px;
+	border: 4px solid black;
+  	margin: 0px 0px 15px;
+	cursor: pointer;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn8:hover, #btn9:hover, #btn7:hover {
+	  background-color: #4CAF50; /* Green */
+}
+
+.btn:hover {
+  background-color: #4CAF50; /* Green */
+}
+
+h1
+{
+	text-align: center;
+}
+
+h3 
+{
+	text-align: center;
+}
+
+.tictactoe
+{
+	margin: auto;
+	width: 488px;
+	height: 488px;
+
+}
+
+button 
+{
+	margin: auto;
+	width: 20%;
+	text-align: center;
+	display: block;
+	font-size: 30px;
+	color: blue;
+}
+
+
+/*
+
+#message1 {font-size: 20px;}
+#message1.showme { 
+    background-color: #ECEA34;  padding: 6px 8px; display:inline-block;
+}*/
